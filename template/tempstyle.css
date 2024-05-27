@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Gochi Hand', cursive;
+}
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+.navbar input[type='checkbox'],
+.navbar .hamburger{
+    display: none;
+
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    background: white;
+    color: rgb(194, 31, 31);
+    opacity: 0.85;
+    z-index: 999;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+.menu-items{
+    order: 2;
+    display: flex;
+}
+ 
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem ;
+    font-size: 1.8rem;
+}
+.button{
+    display: inline-block;
+    padding: 0.5em 2.5em;
+    text-decoration: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 0.5em;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btn-primary{
+    color: rgb(116, 88, 155);
+    background:rgb(242, 221, 242);
+}
+.btn-primary:hover{
+    color: darkorchid;
+}
+.logo{
+    order: 1;
+    font-size: 3rem;
+}
+.navbar a{
+    color: chartreuse;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out ;
+}
+.navbar a:hover{
+    color: rgb(0, 0, 0);
+}
+.page-1{
+    height: 80vh;
+    background: url(./ij.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.page-1-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.8rem;
+}
+.main-title{
+    text-transform: uppercase;
+}
+#about{
+    padding: 50px 0px;
+    background:rgb(239, 198, 226);
+}
+#about h2{
+    font-size: 3.2rem;
+}
+#about p{
+    font-size: 1.6rem;
+    color: firebrick;
+}
+#about .small{
+    font-size: 1,6rem;
+    color: rgb(45, 87, 159);
+    font-weight: 600;
+}
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-img{
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+}
+@keyframes about-img-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+.about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translateX(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+.about-img img{
+    display: block;
+    height: 300px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+}
+
+#sports{
+    padding: 5rem 0 10 rem 0 ;
+}
+#sports h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: rgb(184, 121, 37);
+}
+.sports-container{
+    display: flex;
+    justify-content: space-between;
+}
+.sports-container img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.img-container{
+    margin: 0 1rem;
+    position: relative;
+}
+.img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 2;
+    text-align:center ;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.img-content h3{
+    color: coral;
+    font-size: 1.5rem;
+}
+.img-content p{
+    color: darkgrey;
+    font-size: 1rem;
+}
+.img-content a{
+    font-size: 1rem;
+}
+.img-container::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(147, 218, 218);
+    opacity: 0;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin:100% 100% ;
+    transform: all 0.3s ease-in-out;
+}
+.img-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 40%;
+}
+.info-heading{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 400;
+    color: rgb(184, 126, 50);
+}
+.info-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px;
+}
+.info-container img{
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.info-list{
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+.info-details{
+    margin: auto;
+}
+.sports-title{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: rgb(222, 164, 90);
+}
+.info-details p{
+    font-size: 1.6rem;
+    color: firebrick;
+    font-weight: 500;
+}
+#contact{
+    padding: 5rem 0;
+    background:  linear-gradient(to right, rgb(26, 123, 155) , rgb(36, 33, 33) , rgb(198, 79, 79), rgb(234, 234, 106) ,green) ;
+}
+.contact-container{
+    display: flex;
+    background: rgb(222, 164, 90);
+}
+.contact-img{
+    width: 50%;
+}
+.contact-img img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+.form-container{
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+}
+.form-container input{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: black;
+    font-weight: 500;
+}
+.form-container textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    padding: 1rem 0;
+}
+.form-container h2{
+    font-size: 3rem;
+    font-weight: 400;
+    color: rgb(222, 164, 90);
+    margin-bottom: 1rem;
+}
+.form-container a{
+    font-size: 1.2rem;
+}
